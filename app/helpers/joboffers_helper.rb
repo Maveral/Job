@@ -1,0 +1,2 @@
+module JoboffersHelper
+end

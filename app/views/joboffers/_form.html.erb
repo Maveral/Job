@@ -1,0 +1,19 @@
+<%= form_for(@joboffer) do |f| %>
+  <% if @joboffer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@joboffer.errors.count, "error") %> prohibited this joboffer from being saved:</h2>
+
+      <ul>
+      <% @joboffer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.text_field :title, :value => @joboffer.title %><br />
+  <%= f.text_field :link, :value => @joboffer.link %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

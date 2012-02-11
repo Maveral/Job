@@ -1,0 +1,19 @@
+<h1>Listing joboffers</h1>
+
+<%= will_paginate @joboffers %>
+<br />
+<% @joboffers.each do |joboffer| %>
+  <div>
+  	<%= joboffer.id %>. <%= joboffer.title %> - <%= link_to "Zobacz",  "http://www.praca.pl" + joboffer.link %>
+  </div>
+  <div>
+    <%= link_to 'Show', joboffer %>
+    <%= link_to 'Edit', edit_joboffer_path(joboffer) %>
+    <%= link_to 'Destroy', joboffer, confirm: 'Are you sure?', method: :delete %>
+  </div>
+  <br />
+  
+<% end %>
+<br />
+
+<%= link_to 'New Joboffer', new_joboffer_path %>
