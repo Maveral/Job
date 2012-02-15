@@ -1,0 +1,16 @@
+pl:
+  jobs_browser: Jobs Browser
+  new_offer: Wystaw ofertę
+  link1: Menu 1
+  link2: Menu 2
+  link3: Menu 3
+  link4: Menu 4
+  link5: Menu 5
+  login: Zaloguj się
+  register: Rejestracja
+  new_offers: Najnowsze oferty
+  footer: Tekst stopki
+  will_paginate:
+    previous_label: "Poprzednia"
+    next_label: "Następna"
+    page_gap: "&hellip;"

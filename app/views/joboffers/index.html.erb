@@ -1,19 +1,14 @@
-<h1>Listing joboffers</h1>
+<h1><%= t(:new_offers)%></h1>
 
-<%= will_paginate @joboffers %>
+<div class="pagination"><%= will_paginate @joboffers %></div>
 <br />
 <% @joboffers.each do |joboffer| %>
-  <div>
-  	<%= joboffer.id %>. <%= joboffer.title %> - <%= link_to "Zobacz",  "http://www.praca.pl" + joboffer.link %>
+  <div id=<% if (joboffer.id%2 == 0) %>oferta1<% else %>oferta2<% end %>>
+  	<%= joboffer.id %>. <%= link_to joboffer.title, "http://www.praca.pl" + joboffer.link %>
   </div>
-  <div>
+    <!-- To bedzie pozniej zroboone
     <%= link_to 'Show', joboffer %>
     <%= link_to 'Edit', edit_joboffer_path(joboffer) %>
-    <%= link_to 'Destroy', joboffer, confirm: 'Are you sure?', method: :delete %>
-  </div>
-  <br />
-  
+    <%= link_to 'Destroy', joboffer, confirm: 'Are you sure?', method: :delete %> -->
 <% end %>
-<br />
-
-<%= link_to 'New Joboffer', new_joboffer_path %>
+<div class="pagination"><%= will_paginate @joboffers %></div>

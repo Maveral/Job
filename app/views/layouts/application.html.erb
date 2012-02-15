@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Job</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>Jobs browser</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+	<div id="logo"><%= t(:jobs_browser)%></div>
+	<%= render 'layouts/menu' %><br />
+	<div id="body">
+	<%= yield %>
+	</div>
+	<div id="footer">
+		<%= t(:footer)%> - <%= Time.now.year %>
+	</div>
 
 </body>
 </html>
