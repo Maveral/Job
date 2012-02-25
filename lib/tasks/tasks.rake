@@ -7,6 +7,11 @@ namespace :db do
   task :offers => :environment do
     offers_praca_pl
   end
+  
+  desc "Players from QL"
+  task :players => :environment do
+    ql_players
+  end
 end
 
 def offers_praca_pl #oferty z praca.pl
@@ -30,4 +35,13 @@ def offers_praca_pl #oferty z praca.pl
       end
       @k += 1
   end
+end
+
+def ql_players #gracze z ql
+  @doc = Nokogiri::HTML(open("http://www.quakelive.com/profile/friends/wendel_/"))
+  @doc.xpath("//div[@class = 'player_name']/a/text()").each do |zmienna|
+      player = Player.find_or_create_by_name(:name => zmienna.text)
+      player.save
+  end
+  
 end
