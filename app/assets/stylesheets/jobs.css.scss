@@ -14,82 +14,120 @@ $rounded-corners: 20px;
   margin: 0px;
 }
 
-@mixin menu_divs
-{
-  display: inline;
-  background-color: $background_color;
-  padding: 10px;
-  margin: 10px 0;
-  @include rounded-corners($rounded-corners);
-  a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #000000;
-    &:hover { text-decoration: underline; }
-  }
+form, div, h1, h2, h3, body {
+margin: 0;
 }
 
-body
-{
-  background-color: #FFE4E1;
+
+
+body{
+font-family: "verdana";
+width: 80%;
+margin: 0 auto;
 }
 
-.menudiv
-{
-  @include menu_divs;
-  float:left;
+header{
+    background-color: #b3daff;
+    display: block;
+}
+/* L O G O*/
+#logo{
+
+    height: 100px;
+    padding:{
+        left: 5%;
+        top: 25px;
+        }
+    float: left;
+    margin: {
+        left: 80px;
+    }
+
+    font: {
+        size:30px;
+        weight: bold;
+        family: "verdana";
+    }
+
+    span.text{
+        display: block;
+        font: {
+            size: 20px;
+            weight: normal;
+            }
+    } 
 }
 
-.logindiv
-{
-  @include menu_divs;
-  float: right;
+#search {
+    float: right;
+    margin-right: 5%;
+    padding-top: 30px;
+    margin-top: 0;
+
+    form {
+        #query {
+            //@include rounded-corners("35px");
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+            height: 50px;
+            width: 400px;
+            background-color: white;
+            color: black;
+            font-size: 30px;
+text-align: center;
+padding: 5px;
+border: 0;
+        }
+    }
+}
+.title {
+    clear: both;
+    background-color: black;
+    color: white;
+    display: block;
+padding: 10px 10px 10px 30px;
+font-weight: bold;
+font-size: 20px;
 }
 
-.pagination
-{
-  float: right;
+.sites {
+margin-top: 4px;
+float: right;
+margin-right: 5%;
+font-size: 80%;
+font-weight: normal;
+
+a {
+    color: white;
+    &:hover, &:visited {
+    color: white;
+    }
 }
 
-#body
-{
-  margin-top: 50px;
-  h1{
-  text-align: center;
-  }
 }
 
-#oferta1
-{
-  background-color: $background_color;
-  @include paddmargin;
+article {
+    clear: both;
 }
 
-#oferta2
-{
-  background-color: #AFEEEE;
-  @include paddmargin;
+footer {
+clear: both;
+padding-top: 5px;
+    display: block;
+    text-align: center;
+    border-top: 4px solid black;
 }
 
-#logo
-{
-  background-color: $background_color;
-  @include rounded-corners(30px);
-  width: 100%;
-  height: 200px;
-  font-size: 72px;
-  text-align: center;
-  line-height: 200px;
+.offer {
+margin: 10px;
+padding: 10px;
+    a {
+    border-top: 1px solid silver;
+}
 }
 
-#footer
-{
-  width: 100%;
-  height: 50px;
-  @include rounded-corners(20px);
-  background-color: $background_color;
-  clear: both;
-  margin-top: 50px;
-  text-align: center;
-  line-height: 50px;
+
+.offers{
+    td {padding:10px;}
 }

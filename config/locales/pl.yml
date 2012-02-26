@@ -1,5 +1,5 @@
 pl:
-  jobs_browser: Jobs Browser
+  jobs_browser: JobsBrowser.com
   new_offer: Wystaw ofertę
   link1: Menu 1
   link2: Menu 2
@@ -9,7 +9,7 @@ pl:
   login: Zaloguj się
   register: Rejestracja
   new_offers: Najnowsze oferty
-  footer: Tekst stopki
+  footer: Wszelkie prawa zastrzeżone - jobsbrowser.com
   will_paginate:
     previous_label: "Poprzednia"
     next_label: "Następna"

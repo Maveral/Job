@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Jobs browser</title>
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<div id="logo"><%= t(:jobs_browser)%></div>
-	<%= render 'layouts/menu' %><br />
-	<div id="body">
-	<%= yield %>
-	</div>
-	<div id="footer">
-		<%= t(:footer)%> - <%= Time.now.year %>
-	</div>
+  <head>
+    <title>Jobs browser</title>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+  <header>
+    <div id="logo"><%= t(:jobs_browser)%><span class="text">... find your dream job!</span></div>
+    <div id="search">
+      <%= form_tag "." do %>
+        <%= text_field_tag :query %>
+      <%end%>
+    </div>
+    <div class="title"><%= yield :title %><div class="sites"><%= yield :sites %></div></div>
+  </header>
+  <article>
+    <%= yield %>
+  </article>
+  <div class="title sites"><%= yield :sites %></div>
+  <footer>
+    <%= t(:footer)%> - <%= Time.now.year %>
+  </footer>
 
 </body>
 </html>

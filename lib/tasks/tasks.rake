@@ -16,7 +16,7 @@ def offers_praca_pl #oferty z praca.pl
   @ilosc_stron = @doc.xpath("//span[a>5]").text.to_i
   @title
       
-  @ilosc_stron.times do
+  1.times do
       @doc = Nokogiri::HTML(open("http://www.praca.pl/oferty-pracy_" + @k.to_s))
       @doc.xpath("//td[@class = 'tytul']/a[1] | //td[@class = 'tytul so']/a[1] | //td[@class = 'tytul']/a[1]/attribute::href | //td[@class = 'tytul so']/a[1]/attribute::href").each do |zmienna|
         if @i == 0
