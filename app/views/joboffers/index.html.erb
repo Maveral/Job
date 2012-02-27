@@ -2,15 +2,18 @@
 <%= content_for :sites, will_paginate(@joboffers) %>
 
 <br />
+<ul>
+  <% @joboffers.each do |joboffer| %>
+    <li>
+      <div class="offer"><%= link_to joboffer.title, "http://www.praca.pl" + joboffer.link %><br >
+        <p>tworzenie identyfikacji wizualnych produktów i marek, opracowania projektów graficznych serwisów www, przygotowania do druku</p>
+        <p class="offer_source">źródło: praca.pl</p>
 
-<% @joboffers.each do |joboffer| %>
-<div class="offer"><%= link_to joboffer.title, "http://www.praca.pl" + joboffer.link %>
-  <br />źródło: praca.pl
-
-</div>
+      </div>
+    </li>
     <!-- To bedzie pozniej zroboone
     <%= link_to 'Show', joboffer %>
     <%= link_to 'Edit', edit_joboffer_path(joboffer) %>
     <%= link_to 'Destroy', joboffer, confirm: 'Are you sure?', method: :delete %> -->
-<% end %>
-
+  <% end %>
+</ul>

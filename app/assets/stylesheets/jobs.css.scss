@@ -1,5 +1,8 @@
-$background_color: #00FFFF;
+$background_color: #FFF;
 $rounded-corners: 20px;
+$first_color: black;
+$second_color: #b3daff;
+$third_color: #44a5ff;
 
 @mixin rounded-corners($corner)
 {
@@ -14,21 +17,23 @@ $rounded-corners: 20px;
   margin: 0px;
 }
 
-form, div, h1, h2, h3, body {
+form, div, h1, h2, h3, body, p {
 margin: 0;
 }
 
 
 
 body{
+background-color: white;
 font-family: "verdana";
 width: 80%;
 margin: 0 auto;
 }
 
 header{
-    background-color: #b3daff;
+    background-color: #fff;
     display: block;
+    border-bottom: 1px solid black;
 }
 /* L O G O*/
 #logo{
@@ -36,10 +41,10 @@ header{
     height: 100px;
     padding:{
         left: 5%;
-        top: 25px;
         }
     float: left;
     margin: {
+        top: 25px;
         left: 80px;
     }
 
@@ -51,6 +56,7 @@ header{
 
     span.text{
         display: block;
+        margin-top: 10px;
         font: {
             size: 20px;
             weight: normal;
@@ -72,7 +78,7 @@ header{
   border-radius: 25px;
             height: 50px;
             width: 400px;
-            background-color: white;
+            background-color: $second_color;
             color: black;
             font-size: 30px;
 text-align: center;
@@ -83,8 +89,8 @@ border: 0;
 }
 .title {
     clear: both;
-    background-color: black;
-    color: white;
+
+    color: black;
     display: block;
 padding: 10px 10px 10px 30px;
 font-weight: bold;
@@ -99,9 +105,16 @@ font-size: 80%;
 font-weight: normal;
 
 a {
-    color: white;
-    &:hover, &:visited {
-    color: white;
+    text-decoration: none;
+
+    &:hover{
+color: $second_color;
+background-color: white;
+text-decoration: underline;
+}
+    &:link, &:visited {
+background-color: white;
+color: $first_color;
     }
 }
 
@@ -116,15 +129,16 @@ clear: both;
 padding-top: 5px;
     display: block;
     text-align: center;
-    border-top: 4px solid black;
+    border-top: 1px solid black;
 }
 
 .offer {
 margin: 10px;
 padding: 10px;
-    a {
-    border-top: 1px solid silver;
 }
+
+.offer_source {
+color: $third_color;
 }
 
 
